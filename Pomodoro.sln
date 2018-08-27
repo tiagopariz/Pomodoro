@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoro.Core.Domain", "Pomodoro.Core.Domain\Pomodoro.Core.Domain.csproj", "{AE2662B4-46AF-4811-A6B7-8EDD8049DA43}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoro.Core.Domain", "src\Pomodoro.Core.Domain\Pomodoro.Core.Domain.csproj", "{AE2662B4-46AF-4811-A6B7-8EDD8049DA43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoro.Domain", "Pomodoro.Domain\Pomodoro.Domain.csproj", "{70E7516A-C705-4AE5-9666-502526C73796}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoro.Domain", "src\Pomodoro.Domain\Pomodoro.Domain.csproj", "{70E7516A-C705-4AE5-9666-502526C73796}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoro.Test", "Pomodoro.Test\Pomodoro.Test.csproj", "{E5E5E528-1366-492B-83C8-B37BFAC78ED7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoro.Test", "tests\Pomodoro.Test\Pomodoro.Test.csproj", "{E5E5E528-1366-492B-83C8-B37BFAC78ED7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoro.Timer", "Pomodoro.Timer\Pomodoro.Timer.csproj", "{04A151A3-C189-4C6D-AF0B-B97F09EB6EB1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoro.Timer", "src\Pomodoro.Timer\Pomodoro.Timer.csproj", "{04A151A3-C189-4C6D-AF0B-B97F09EB6EB1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
