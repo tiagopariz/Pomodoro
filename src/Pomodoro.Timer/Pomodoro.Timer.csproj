@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Pomodoro.Domain\Pomodoro.Domain.csproj" />
-    <ProjectReference Include="..\..\Pomodoro.Core.Domain\Pomodoro.Core.Domain.csproj" />
+    <ProjectReference Include="..\..\src\Pomodoro.Domain\Pomodoro.Domain.csproj" />
+    <ProjectReference Include="..\..\core\src\Pomodoro.Core.Domain\Pomodoro.Core.Domain.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
