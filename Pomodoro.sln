@@ -3,13 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoro.Core.Domain", "src\Pomodoro.Core.Domain\Pomodoro.Core.Domain.csproj", "{AE2662B4-46AF-4811-A6B7-8EDD8049DA43}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoro.Core.Domain", "core\src\Pomodoro.Core.Domain\Pomodoro.Core.Domain.csproj", "{AE2662B4-46AF-4811-A6B7-8EDD8049DA43}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoro.Domain", "src\Pomodoro.Domain\Pomodoro.Domain.csproj", "{70E7516A-C705-4AE5-9666-502526C73796}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoro.Test", "tests\Pomodoro.Test\Pomodoro.Test.csproj", "{E5E5E528-1366-492B-83C8-B37BFAC78ED7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoro.Timer", "src\Pomodoro.Timer\Pomodoro.Timer.csproj", "{04A151A3-C189-4C6D-AF0B-B97F09EB6EB1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{A8C7C850-AAC3-11E8-BC4D-F995FD8F5E77}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{FAB09020-AAC3-11E8-BC4D-F995FD8F5E77}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{905E4810-AAC4-11E8-BC4D-F995FD8F5E77}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{C472F420-AAC4-11E8-BC4D-F995FD8F5E77}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{EF479D40-AAC4-11E8-BC4D-F995FD8F5E77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,5 +82,12 @@ Global
 		{04A151A3-C189-4C6D-AF0B-B97F09EB6EB1}.Release|x64.Build.0 = Release|x64
 		{04A151A3-C189-4C6D-AF0B-B97F09EB6EB1}.Release|x86.ActiveCfg = Release|x86
 		{04A151A3-C189-4C6D-AF0B-B97F09EB6EB1}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{04A151A3-C189-4C6D-AF0B-B97F09EB6EB1} = {EF479D40-AAC4-11E8-BC4D-F995FD8F5E77}
+		{E5E5E528-1366-492B-83C8-B37BFAC78ED7} = {C472F420-AAC4-11E8-BC4D-F995FD8F5E77}
+		{905E4810-AAC4-11E8-BC4D-F995FD8F5E77} = {FAB09020-AAC3-11E8-BC4D-F995FD8F5E77}
+		{AE2662B4-46AF-4811-A6B7-8EDD8049DA43} = {905E4810-AAC4-11E8-BC4D-F995FD8F5E77}
+		{70E7516A-C705-4AE5-9666-502526C73796} = {A8C7C850-AAC3-11E8-BC4D-F995FD8F5E77}
 	EndGlobalSection
 EndGlobal

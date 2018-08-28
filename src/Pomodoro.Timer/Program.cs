@@ -19,9 +19,9 @@ namespace Pomodoro.Timer
 
             foreach (var item in pomodoro.Periods)
             {
-                Console.WriteLine(item.Title);
+                //Console.WriteLine(item.Title);
                 item.Start();
-                Console.WriteLine();
+                //Console.WriteLine();
             }
         }
     }

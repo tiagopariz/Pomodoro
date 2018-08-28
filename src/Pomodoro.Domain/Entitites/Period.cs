@@ -35,10 +35,17 @@ namespace Pomodoro.Domain.Entities
         {
             for (var i = 0; i < Size; i++)
             {
+                if (Type == PeriodType.Period)
+                    Console.BackgroundColor = ConsoleColor.Red;
+                else
+                    Console.BackgroundColor = ConsoleColor.Green;
+                
                 current = i;
-                Thread.Sleep(1000 * 60);
+                Thread.Sleep(1000);
                 Console.Write(".");
+                Console.ResetColor();
             }
+            Console.Write("|");
         }
     }
 }
