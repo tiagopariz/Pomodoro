@@ -7,8 +7,9 @@ namespace Pomodoro.Timer
     {
         static void Main(string[] args)
         {
-            var pomodoro = new PomodoroPlan(Guid.NewGuid());
-            pomodoro.Start();
+            var plan = new Plan(Guid.NewGuid());
+            plan.SetPomodoro();
+            plan.Start();
         }
     }
 }

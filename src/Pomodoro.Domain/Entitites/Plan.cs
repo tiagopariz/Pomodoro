@@ -28,8 +28,37 @@ namespace Pomodoro.Domain.Entities
         public void AddInterval(int minutes, string title = "")
         {
             var order = _periods?.Count() ?? 0;
-            var period = new Period(Guid.NewGuid(), title, order, minutes, PeriodType.Interval, null);
+            var period = new Period(Guid.NewGuid(), 
+                                    title,
+                                    order,
+                                    minutes,
+                                    PeriodType.Interval,
+                                    null);
             _periods.Add(period);
+        }
+
+        public void SetPomodoro()
+        {
+            _periods = new List<Period>();
+            AddPeriod(25, "Pomodoro 1");
+            AddInterval(5, "Interval 1");
+            AddPeriod(25, "Pomodoro 2");
+            AddInterval(5, "Interval 2");
+            AddPeriod(25, "Pomodoro 3");
+            AddInterval(5, "Interval 3");
+            AddPeriod(25, "Pomodoro 4");
+            AddInterval(30, "Interval 4");
+        }
+
+        public void Start(int repeat = 1)
+        {
+            for (var i = 1; i <= repeat; i++)
+            {
+                foreach (var item in Periods)
+                {
+                    item.Start();
+                }
+            }
         }
     }
 }
