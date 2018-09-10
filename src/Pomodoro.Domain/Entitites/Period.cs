@@ -41,7 +41,7 @@ namespace Pomodoro.Domain.Entities
                     Console.BackgroundColor = ConsoleColor.Green;
                 
                 current = i;
-                Thread.Sleep(1000);
+                Thread.Sleep(1000 * 60);
                 Console.Write(".");
                 Console.ResetColor();
             }

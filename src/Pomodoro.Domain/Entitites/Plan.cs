@@ -3,6 +3,7 @@ using Pomodoro.Core.Domain.Entities;
 using System.Collections.Generic;
 using System.Linq;
 using Pomodoro.Domain.Enums;
+using Pomodoro.Domain.ValueObjects;
 
 namespace Pomodoro.Domain.Entities
 {
@@ -57,7 +58,9 @@ namespace Pomodoro.Domain.Entities
                 foreach (var item in Periods)
                 {
                     item.Start();
-                }
+                    var soundBeep = new Sound("");
+                    soundBeep.Play();
+                }                
             }
         }
     }
