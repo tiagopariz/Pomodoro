@@ -12,28 +12,34 @@ namespace Pomodoro.Domain.Entities
         public Period(Guid id,
                       string title,
                       int order,
-                      int size,
+                      int recap,
+                      int minutes,
+                      int review,
                       PeriodType type,
                       Period nextPeriod)
-                :base(id)
+                : base(id)
         {
             Title = title;
             Order = order;
-            Size = size;
+            Recap = recap;
+            Minutes = minutes;
+            Review = review;
             Type = type;
             NextPeriod = nextPeriod;
         }
 
         public string Title { get; }
         public int Order { get; }
-        public int Size { get; }
+        public int Recap { get; }
+        public int Minutes { get; }
+        public int Review { get; }
         public PeriodType Type { get; }
         public Period NextPeriod { get; }
         public int Current => current;
 
         public void Start()
         {
-            for (var i = 0; i < Size; i++)
+            for (var i = 0; i < Minutes; i++)
             {
                 if (Type == PeriodType.Period)
                     Console.BackgroundColor = ConsoleColor.Red;

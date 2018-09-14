@@ -19,20 +19,47 @@ namespace Pomodoro.Domain.Entities
 
         public IReadOnlyCollection<Period> Periods => _periods.ToArray();
 
-        public void AddPeriod(int minutes, string title = "")
+        public void AddPeriod(int minutes,
+                                string title = "Pomodoro")
         {
-            var order = _periods?.Count() ?? 0;
-            var period = new Period(Guid.NewGuid(), title, order, minutes, PeriodType.Period, null);
-            _periods.Add(period);
+            AddPeriod(0, minutes, 0, title);
         }
 
-        public void AddInterval(int minutes, string title = "")
+        public void AddPeriod(int recap,
+                              int minutes,
+                              int review,
+                              string title = "Pomodoro")
         {
             var order = _periods?.Count() ?? 0;
             var period = new Period(Guid.NewGuid(), 
                                     title,
                                     order,
+                                    recap,
                                     minutes,
+                                    review,
+                                    PeriodType.Period,
+                                    null);
+            _periods.Add(period);
+        }
+
+        public void AddInterval(int minutes,
+                                string title = "Interval")
+        {
+            AddInterval(0, minutes, 0, title);
+        }
+
+        public void AddInterval(int recap,
+                               int minutes,
+                               int review,
+                               string title = "Interval")
+        {
+            var order = _periods?.Count() ?? 0;
+            var period = new Period(Guid.NewGuid(), 
+                                    title,
+                                    order,
+                                    recap,
+                                    minutes,
+                                    review,
                                     PeriodType.Interval,
                                     null);
             _periods.Add(period);
